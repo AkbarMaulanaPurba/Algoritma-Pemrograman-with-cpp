@@ -14,7 +14,7 @@ int main() {
 	cout << "Masukan Jumlah Terjual: ";
 	cin >> jterjual;
 	
-	if(jterjual <= target){
+	if(jterjual == target){
 		komisi = jterjual * 0.1;
 		sisa = 0;
 	}
@@ -23,13 +23,13 @@ int main() {
 		sisa = (jterjual - target) * 0.15;
 	}
 total = komisi + sisa;
-if(jterjual > 0){
+if(jterjual >= target){
 
 cout << "Komisi: "<< komisi << endl;
 cout << "sisa: " << sisa << endl;
 cout << "Total Komisi: " << total;
 } else {
-	cout << "Jumlah Terjual Tidak Valid!";
+	cout << "Tidak Ada Komisi";
 }
 return 0;
 }
